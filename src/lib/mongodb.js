@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb';
 
 let uri = process.env.MONGODB_URI;
-let dbName = 'chatApp';
+let dbName = process.env.MONGODB_DB;
 
 let cachedClient = null;
 let cachedDb = null;

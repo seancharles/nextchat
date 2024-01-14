@@ -41,7 +41,7 @@ export default function Home() {
         <button type="submit">Send</button>
       </form>
       <div>
-        {chat.map((msg, index) => (
+        {Array.isArray(chat) && chat.map((msg, index) => (
           <p key={index}>{msg.message}</p> // Assuming 'msg' has a 'message' field
         ))}
       </div>
